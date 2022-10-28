@@ -14,24 +14,30 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Nome',
+              ),
+              onChanged: controller.changeName,
+            ),
+            SizedBox(height: 20),
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Sobrenome',
+              ),
+              onChanged: controller.changeLastname,
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Observer(
               builder: (_) {
-                return Text(
-                  '${controller.counter}',
-                  style: Theme.of(context).textTheme.bodyText1,
-                );
+                return Text(controller.nomecompleto);
               },
-            ),
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          controller.increment();
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }

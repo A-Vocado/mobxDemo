@@ -5,10 +5,21 @@ class Controller = ControllerBase with _$Controller;
 
 abstract class ControllerBase with Store {
   @observable
-  int counter = 0;
+  String name = '';
+
+  @observable
+  String lastname = '';
+
+  @computed
+  String get nomecompleto => '$name $lastname';
 
   @action
-  increment() {
-    counter++;
+  changeName(String newName) {
+    name = newName;
+  }
+
+  @action
+  changeLastname(String newName) {
+    lastname = newName;
   }
 }
