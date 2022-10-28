@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial_mobx/home.dart';
+import 'package:tutorial_mobx/models/home.dart';
 
 void main() {
   runApp(const MyApp());
