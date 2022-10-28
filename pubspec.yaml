@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   mobx: ^2.1.1
   flutter_mobx: ^2.0.6+4
+  provider:
 
 dev_dependencies:
   mobx_codegen:
